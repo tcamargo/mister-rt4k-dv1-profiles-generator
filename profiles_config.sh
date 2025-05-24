@@ -1,16 +1,16 @@
 # profiles_config.sh
 
 # Set Base Profiles (Console, Arcade)
-PRF_CONSOLE="${RT4K}profile/CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K HDR.rt4"
-PRF_ARCADE="${RT4K}profile/CRT TV and PVM Emulation by Kuro Houou/JVC D-Series-D200 - 4K HDR.rt4"
+PRF_CONSOLE="profile/console.rt4"
+PRF_ARCADE="profile/console.rt4"
 
 # Cores to ignore (comma-separated list)
 # Example: IGNORE_CORES_FROM_CONFIG="Menu,TurboGrafx16,GameBoy"
 #IGNORE_CORES_FROM_CONFIG=""
 
 # Define portable profiles
-PRF_GBA="${RT4K}profile/Nintendo Switch/Billgonzo's GBC-GBA Profiles/Switch_GBA_13x.rt4"
-PRF_GAMEBOYCOLOR="${RT4K}profile/Nintendo Switch/Billgonzo's GBC-GBA Profiles/Switch_GBC_15x.rt4"
+PRF_GBA="profile/gba.rt4"
+PRF_GAMEBOYCOLOR="profile/gbc.rt4"
 
 # Define per-core profiles override
 #PRF_NES="${RT4K}profile/Nintendo NES + FC/FirebrandX HDRV-Low NTSC/NES DAR 09x.rt4"
@@ -34,13 +34,13 @@ PRF_GAMEBOYCOLOR="${RT4K}profile/Nintendo Switch/Billgonzo's GBC-GBA Profiles/Sw
 #PRF_CHANNELF=""
 #PRF_COLECOVISION=""
 #PRF_CREATIVISION=""
-#PRF_GBA2P=""
+PRF_GBA2P="profile/gba.rt4"
 #PRF_GAMATE=""
 #PRF_GAMEGEAR=""
 #PRF_GAMEANDWATCH=""
-#PRF_GAMEBOY2P=""
+PRF_GAMEBOY2P="profile/gbc.rt4"
 #PRF_GAMEBOYCOLOR=""
-#PRF_GAMEBOY=""
+PRF_GAMEBOY="profile/gbc.rt4"
 #PRF_GENESIS=""
 #PRF_GNW=""
 #PRF_INTELLIVISION=""
