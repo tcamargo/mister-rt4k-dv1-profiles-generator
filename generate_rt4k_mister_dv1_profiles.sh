@@ -200,7 +200,7 @@ overwritten_profile_names=()
 skipped_profile_names=()
 
 # Initialize ignore cores list
-declare -a IGNORE_CORES_ARRAY
+declare -a IGNORE_CORES_ARRAY=()
 if [ -n "$IGNORE_CORES" ]; then
   IFS=',' read -ra IGNORE_CORES_ARRAY <<< "$IGNORE_CORES"
   log "Cores to ignore: ${IGNORE_CORES_ARRAY[*]:-}"
@@ -210,9 +210,8 @@ fi
 is_core_ignored() {
   local core_name="$1"
   # Check if array has elements before iterating
-  # Use [@]:-  to handle empty arrays with set -u
-  if [ ${#IGNORE_CORES_ARRAY[@]:-0} -gt 0 ]; then
-    for ignored_core in "${IGNORE_CORES_ARRAY[@]:-}"; do
+  if [ ${#IGNORE_CORES_ARRAY[@]} -gt 0 ]; then
+    for ignored_core in "${IGNORE_CORES_ARRAY[@]}"; do
       if [[ "$core_name" == "$ignored_core" ]]; then
         return 0  # Core is ignored
       fi
